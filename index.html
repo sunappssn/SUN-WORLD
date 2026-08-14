@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUN WORLD</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0b0b0f;
+      color: white;
+    }
+
+    header {
+      height: 70px;
+      background: #111118;
+      border-bottom: 1px solid #292932;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #ffd000, #ff4d00, #ff00c8);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .search {
+      width: 320px;
+      padding: 12px 18px;
+      border-radius: 25px;
+      border: none;
+      outline: none;
+      background: #22222b;
+      color: white;
+      font-size: 15px;
+    }
+
+    .profile {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ffcc00, #ff0066);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px 20px 100px;
+    }
+
+    .stories {
+      display: flex;
+      gap: 18px;
+      overflow-x: auto;
+      padding-bottom: 25px;
+    }
+
+    .story {
+      min-width: 75px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .story-img {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      padding: 3px;
+      background: linear-gradient(45deg, #ffcc00, #ff0066, #8b00ff);
+      margin-bottom: 6px;
+    }
+
+    .story-img div {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .create {
+      background: linear-gradient(135deg, #ff0066, #7b00ff);
+      padding: 20px;
+      border-radius: 18px;
+      margin: 10px 0 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .create button {
+      border: none;
+      padding: 12px 22px;
+      border-radius: 25px;
+      background: white;
+      color: #111;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .post {
+      background: #15151d;
+      border: 1px solid #292932;
+      border-radius: 18px;
+      overflow: hidden;
+      margin-bottom: 25px;
+    }
+
+    .post-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 15px;
+    }
+
+    .avatar {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #00d4ff, #7b00ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .post-image {
+      height: 500px;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 50px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 20px;
+      padding: 15px;
+      font-size: 25px;
+    }
+
+    .actions span {
+      cursor: pointer;
+    }
+
+    .caption {
+      padding: 0 15px 20px;
+      color: #ddd;
+    }
+
+    nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background: #111118;
+      border-top: 1px solid #292932;
+      display: flex;
+      justify-content: center;
+      gap: 70px;
+      align-items: center;
+      z-index: 200;
+    }
+
+    nav button {
+      border: none;
+      background: transparent;
+      color: white;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    nav button:hover {
+      transform: scale(1.15);
+    }
+
+    @media (max-width: 700px) {
+      header {
+        padding: 0 15px;
+      }
+
+      .search {
+        width: 150px;
+      }
+
+      main {
+        padding: 20px 10px 100px;
+      }
+
+      .post-image {
+        height: 430px;
+      }
+
+      nav {
+        gap: 35px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">☀ SUN WORLD</div>
+
+  <input
+    class="search"
+    type="text"
+    placeholder="Rechercher..."
+  >
+
+  <div class="profile">SW</div>
+</header>
+
+<main>
+
+  <div class="stories">
+
+    <div class="story">
+      <div class="story-img">
+        <div>+</div>
+      </div>
+      Votre story
+    </div>
+
+    <div class="story">
+      <div class="story-img">
+        <div>👤</div>
+      </div>
+      Amadou
+    </div>
+
+    <div class="story">
+      <div class="story-img">
+        <div>👩</div>
+      </div>
+      Fatou
+    </div>
+
+    <div class="story">
+      <div class="story-img">
+        <div>🎵</div>
+      </div>
+      Music
+    </div>
+
+    <div class="story">
+      <div class="story-img">
+        <div>⚽</div>
+      </div>
+      Football
+    </div>
+
+  </div>
+
+  <div class="create">
+    <div>
+      <h2>Bienvenue sur SUN WORLD 🌍</h2>
+      <p>Partage ton monde avec tout le monde.</p>
+    </div>
+
+    <button onclick="createPost()">
+      + Publier
+    </button>
+  </div>
+
+  <article class="post">
+
+    <div class="post-head">
+      <div class="avatar">A</div>
+
+      <div>
+        <strong>Amadou</strong>
+        <br>
+        <small>@amadou • il y a 5 min</small>
+      </div>
+    </div>
+
+    <div class="post-image">
+      🌍
+    </div>
+
+    <div class="actions">
+      <span onclick="likePost(this)">♡</span>
+      <span>💬</span>
+      <span>↗</span>
+      <span>🔖</span>
+    </div>
+
+    <div class="caption">
+      <strong>Amadou</strong>
+      Découvrez le nouveau SUN WORLD 🌍🔥
+      <br><br>
+      <span>❤️ 1 245 j'aime</span>
+    </div>
+
+  </article>
+
+  <article class="post">
+
+    <div class="post-head">
+      <div class="avatar">F</div>
+
+      <div>
+        <strong>Fatou</strong>
+        <br>
+        <small>@fatou • il y a 12 min</small>
+      </div>
+    </div>
+
+    <div class="post-image">
+      🎥
+    </div>
+
+    <div class="actions">
+      <span onclick="likePost(this)">♡</span>
+      <span>💬</span>
+      <span>↗</span>
+      <span>🔖</span>
+    </div>
+
+    <div class="caption">
+      <strong>Fatou</strong>
+      Ma première vidéo sur SUN WORLD 🎥✨
+    </div>
+
+  </article>
+
+</main>
+
+<nav>
+  <button>🏠</button>
+  <button>🔎</button>
+  <button onclick="createPost()">➕</button>
+  <button>🎥</button>
+  <button>👤</button>
+</nav>
+
+<script>
+
+function likePost(element) {
+  if (element.innerHTML === "♡") {
+    element.innerHTML = "❤️";
+  } else {
+    element.innerHTML = "♡";
+  }
+}
+
+function createPost() {
+  alert("La création de publications sera disponible dans la prochaine version de SUN WORLD 🚀");
+}
+
+</script>
+
+</body>
+</html>
